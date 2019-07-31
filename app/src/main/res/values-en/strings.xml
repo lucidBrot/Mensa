@@ -9,4 +9,5 @@
     <string name="closed">closed</string>
     <string name="made_by">made with ♡ by <a href="https://famoser.ch">famoser</a></string>
     <string name="source">source code on <a href="https://github.com/famoser/Mensa">github</a></string>
+    <string name="settings">Settings</string>
 </resources>

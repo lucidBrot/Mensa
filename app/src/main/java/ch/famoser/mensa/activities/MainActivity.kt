@@ -3,6 +3,8 @@ package ch.famoser.mensa.activities
 import android.os.Bundle
 import android.os.Parcelable
 import android.text.method.LinkMovementMethod
+import android.view.MenuInflater
+import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import ch.famoser.mensa.R
 import ch.famoser.mensa.adapters.LocationAdapter
@@ -59,6 +61,13 @@ class MainActivity : AppCompatActivity() {
 
         made_by.movementMethod = LinkMovementMethod.getInstance()
         source.movementMethod = LinkMovementMethod.getInstance()
+
+        settings.setOnClickListener {
+            val popup = PopupMenu(this, it)
+            val inflater: MenuInflater = popup.menuInflater
+            inflater.inflate(R.menu.settings, popup.menu)
+            popup.show()
+        }
 
         this.refreshMensaEventProcessor = ProgressCollector(swipeContainer, downloadProgress)
 

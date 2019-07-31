@@ -18,6 +18,32 @@
                 android:layout_height="wrap_content">
 
 
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:orientation="horizontal"
+            >
+
+                <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_settings"
+                        android:contentDescription="@string/settings"
+                />
+
+                <ImageButton
+                        android:id="@+id/settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_settings"
+                        android:contentDescription="@string/settings" />
+
+            </LinearLayout>
+
+
+
             <ch.famoser.mensa.views.SaveScrollRecyclerView
                     android:id="@+id/location_list"
                     android:name="ch.famoser.mensa.ItemListFragment"
@@ -28,7 +54,7 @@
                     tools:context=".activities.MainActivity"
                     tools:listitem="@layout/row_location"
                     tools:itemCount="1"
-                    tools:layout_height="200sp"/>
+                    tools:layout_height="480sp"/>
 
             <LinearLayout
                     android:layout_width="match_parent"
